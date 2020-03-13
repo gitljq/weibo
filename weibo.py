@@ -291,6 +291,9 @@ class Weibo(object):
                 weibo_content = self.get_original_weibo(info, weibo_id)
             else:
                 weibo_content = self.get_retweet(info, weibo_id)
+
+            if weibo_content.__contains__(","):
+                weibo_content.replace(",","，")
             return weibo_content
         except Exception as e:
             print('Error: ', e)
@@ -404,7 +407,7 @@ class Weibo(object):
                         p.replace('/thumb180/', '/large/')
                         for p in preview_picture_list
                     ]
-                    picture_urls = ','.join(picture_list)
+                    picture_urls = '，'.join(picture_list)
                 else:
                     if info.xpath('.//img/@src'):
                         preview_picture = info.xpath('.//img/@src')[-1]
@@ -468,7 +471,7 @@ class Weibo(object):
                     wb_info = requests.get(video_link,
                                            cookies=self.cookie).json()
                     video_url = wb_info['data']['object']['stream'].get(
-                        'hd_url')
+                        'hd_url').replace(",","，")
                     if not video_url:
                         video_url = wb_info['data']['object']['stream']['url']
                         if not video_url:  # 说明该视频为直播
@@ -689,8 +692,8 @@ class Weibo(object):
                           encoding='utf-8-sig',
                           newline='') as f:
                     writer = csv.writer(f)
-                    if wrote_num == 0:
-                        writer.writerows([result_headers])
+                    # if wrote_num == 0:
+                    #     writer.writerows([result_headers])
                     writer.writerows(result_data)
             print(u'%d条微博写入csv文件完毕,保存路径:' % self.got_num)
             print(self.get_filepath('csv'))
@@ -820,7 +823,7 @@ class Weibo(object):
                 if is_end:
                     break
 
-                if page % 20 == 0:  # 每爬20页写入一次文件
+                if page % 2 == 0:  # 每爬20页写入一次文件
                     self.write_data(wrote_num)
                     wrote_num = self.got_num
 
@@ -907,7 +910,6 @@ def main():
     except Exception as e:
         print('Error: ', e)
         traceback.print_exc()
-
 
 if __name__ == '__main__':
     main()

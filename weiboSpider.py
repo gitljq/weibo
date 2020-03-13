@@ -992,7 +992,6 @@ class Weibo(object):
                 is_end = self.get_one_page(page)  # 获取第page页的全部微博
                 if is_end:
                     break
-
                 if page % 20 == 0:  # 每爬20页写入一次文件
                     self.write_data(wrote_num)
                     wrote_num = self.got_num

@@ -1,9 +1,9 @@
 {
-	"user_id_list": ["2803301701","2656274875","2028810631","1618051664","5044281310","1784473157","1649173367","1642512402","1773041022","1314608344"],
+	"user_id_list": ["2803301701"],
     "filter": 1,
     "since_date": "2020-01-01",
-    "write_mode": ["csv","mongo"],
+    "write_mode": ["csv"],
     "pic_download": 0,
     "video_download": 0,
-    "cookie": "_T_WM=53872343439; login=5ba20f5837ab1cba9090cdc497c625c6; FID=2MjleKRoUAAOZBB1PZtS2BHJHs717wWC8BWxvZ2lu; SUB=_2A25zLWp2DeRhGeBK4loY8yrPyTmIHXVQ7nY-rDV6PUJbktANLRn9kW1NR3IrZzIc5wVlCoA59bVFmz1aoBll3B_n; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WFS6phI6w-v.-B2dB_BOcnv5NHD95QcSh.R1KeXe0zfWs4Dqcjri--Xi-zRiKn7i--ciKL2i-2pi--fi-2Xi-2Ni--4i-zpi-ihIPyD; SUHB=0BLo2PSw6Rh5ku; SSOLoginState=1579751974"
+    "cookie": "SCF=Anmsuctb0qctit-3oMtoYVzn4pYVCZ7RdNPSpIkNygCmky_i0iQUpycdUyS6TwgszXwnryW6jKUg7vbvZu9GaFc.; SUB=_2A25zS4QTDeRhGeBK4loY8yrPyTmIHXVQtyxbrDV6PUJbktANLRXHkW1NR3IrZw7wa4cregaKtMkb91UymhTy0zIL; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WFS6phI6w-v.-B2dB_BOcnv5JpX5KzhUgL.FoqX1Kn4e0B0eo-2dJLoIEMLxKBLBonL1h5LxKqL1-BLBK2LxK-LBKBLBKMLxK.LBo2LB.SDws.t; SUHB=0rr7AIqWFdnDqj; _T_WM=84c950cd68d9063cddd2bcb40e2d5e89"
 }
